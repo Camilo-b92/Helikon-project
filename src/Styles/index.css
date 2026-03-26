@@ -1,0 +1,34 @@
+/* =============================
+   Index.css — Estilos base globales
+   ============================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-dark: #111111;
+  --color-accent: #c0392b;
+  --color-light: #f8f8f8;
+  --color-muted: #6c757d;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
