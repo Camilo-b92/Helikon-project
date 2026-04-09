@@ -37,7 +37,11 @@ export default function HelikonPage() {
           <Row className="g-4 align-items-stretch">
             <Col lg={5}>
               <div className="feature-card main">
-                <div className="media-placeholder feature-image" />
+                <img
+                  src="/Helikon.png"
+                  alt="Nuestra Esencia"
+                  className="feature-image"
+                />
                 <h3>Nuestra Esencia</h3>
                 <p>
                   Descubre quienes somos y que nos inspira. Aqui encontraras la
@@ -63,16 +67,36 @@ export default function HelikonPage() {
         <Container fluid="xl">
           <SectionMarker title="Integrantes" align="right" />
           <Row className="g-4">
-            {["Gabriel Torres", "Camilo Betancourt", "Brayhan Castillo"].map(
-              (member) => (
-                <Col md={4} key={member}>
-                  <div className="member-card">
-                    <div className="media-placeholder member-photo" />
-                    <h3>{member}</h3>
-                  </div>
-                </Col>
-              ),
-            )}
+            <Col md={4}>
+              <div className="member-card">
+                <img
+                  src="/Gabriel.png"
+                  alt="Gabriel Torres"
+                  className="member-photo"
+                />
+                <h3>Gabriel Torres</h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="member-card">
+                <img
+                  src="/Camilo.png"
+                  alt="Camilo Betancourt"
+                  className="member-photo"
+                />
+                <h3>Camilo Betancourt</h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="member-card">
+                <img
+                  src="/Bryhan.png"
+                  alt="Brayhan Castillo"
+                  className="member-photo"
+                />
+                <h3>Brayhan Castillo</h3>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>

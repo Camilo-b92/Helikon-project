@@ -1,11 +1,5 @@
-/* ═══════════════════════════════════════════════════════
-   GLOBAL.CSS  —  Tokens, reset y componentes compartidos
-═══════════════════════════════════════════════════════ */
-
-/* ── GOOGLE FONTS ── */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
 
-/* ── DESIGN TOKENS ── */
 :root {
   --black:       #000000;
   --dark-brown:  #2A1409;
@@ -18,7 +12,6 @@
   --cream:       #F5EDD8;
   --white:       #ffffff;
 
-  --line-blue:   #3344FF;
   --footer-bg:   #1A0A00;
   --footer-text: rgba(240, 220, 180, 0.75);
   --member-card: #5A3020;
@@ -30,7 +23,6 @@
   --font-serif:   'Playfair Display', Georgia, serif;
 }
 
-/* ── RESET ── */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -46,11 +38,8 @@ a      { color: inherit; text-decoration: none; }
 button { border: 0; background: transparent; }
 .app-shell { min-height: 100vh; }
 
-/* ════════════════════════════════════════
-   COMPONENTES COMPARTIDOS
-════════════════════════════════════════ */
+/* ═ Muchachos, de aca pa abajo estan los estilos de los elementos que se comparten en todas o algunas de las paginas ═ */
 
-/* ── Page Menu ── */
 .page-menu {
   display: grid;
   gap: 0.45rem;
@@ -67,7 +56,6 @@ button { border: 0; background: transparent; }
 }
 .page-menu-link:hover { color: var(--gold); }
 
-/* ── Social Rail ── */
 .social-rail          { display: flex; gap: 0.85rem; }
 .social-rail-vertical { flex-direction: column; align-items: center; }
 .social-rail-grid     { flex-wrap: wrap; justify-content: center; }
@@ -95,7 +83,6 @@ button { border: 0; background: transparent; }
   background: rgba(255, 255, 255, 0.72);
 }
 
-/* ── Simple Icon ── */
 .simple-icon {
   display: inline-flex;
   align-items: center;
@@ -107,7 +94,6 @@ button { border: 0; background: transparent; }
   text-transform: uppercase;
 }
 
-/* ── Section Marker ── */
 .section-marker {
   display: flex;
   align-items: center;
@@ -135,7 +121,6 @@ button { border: 0; background: transparent; }
   text-decoration-thickness: 3px;
 }
 
-/* ── Section Band ── */
 .section-band {
   padding: 2rem 0 3rem;
   border-top: 3px solid var(--line-blue);
@@ -144,7 +129,6 @@ button { border: 0; background: transparent; }
 .band-dark   { background: var(--dark-brown) !important; }
 .band-medium { background: var(--mid-brown)  !important; }
 
-/* ── Media Placeholder ── */
 .media-placeholder {
   position: relative;
   overflow: hidden;
@@ -161,7 +145,6 @@ button { border: 0; background: transparent; }
 }
 .rectangular { aspect-ratio: 4 / 5; }
 
-/* ── Pill Button / Home Return ── */
 .pill-button,
 .home-return-pill {
   padding: 0.45rem 1.3rem;
@@ -178,7 +161,6 @@ button { border: 0; background: transparent; }
 .pill-button:hover,
 .home-return-pill:hover { background: var(--gold) !important; }
 
-/* ── Member Card ── */
 .member-card {
   padding: 1rem;
   border-radius: 1rem;
@@ -195,7 +177,6 @@ button { border: 0; background: transparent; }
 }
 .member-photo { aspect-ratio: 4 / 5; }
 
-/* ── Site Footer ── */
 .site-footer {
   padding: 3rem 0 2.5rem;
   border-top: 3px solid var(--line-blue);
@@ -218,9 +199,7 @@ button { border: 0; background: transparent; }
 }
 .site-footer-links a:hover { color: var(--gold); }
 
-/* ════════════════════════════════════════
-   RESPONSIVE GLOBAL
-════════════════════════════════════════ */
+/* ═ Muchachos, aca va un responsive basico ═ */
 @media (max-width: 991.98px) {
   .page-menu { padding-top: 0; }
 }

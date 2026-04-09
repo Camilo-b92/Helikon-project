@@ -26,7 +26,11 @@ export default function ComicPage() {
               <span aria-hidden="true">&lt;</span>
             </button>
             <div className="chapter-card side">
-              <div className="media-placeholder chapter-thumb" />
+              <img
+                src="/Capitulo 3.png"
+                alt="Capitulo 3"
+                className="chapter-thumb"
+              />
               <h3>Capitulo 3</h3>
               <h4>La liberacion</h4>
               <p>
@@ -35,7 +39,11 @@ export default function ComicPage() {
               </p>
             </div>
             <div className="chapter-card featured">
-              <div className="media-placeholder chapter-thumb" />
+              <img
+                src="/Capitulo 1.png"
+                alt="Capitulo 1"
+                className="chapter-thumb"
+              />
               <h3>Capitulo 1</h3>
               <h4>El descubrimiento</h4>
               <p>
@@ -44,7 +52,11 @@ export default function ComicPage() {
               </p>
             </div>
             <div className="chapter-card side">
-              <div className="media-placeholder chapter-thumb" />
+              <img
+                src="/Capitulo 2.png"
+                alt="Capitulo 2"
+                className="chapter-thumb"
+              />
               <h3>Capitulo 2</h3>
               <h4>La maldicion</h4>
               <p>
@@ -63,14 +75,32 @@ export default function ComicPage() {
         <Container fluid="xl">
           <SectionMarker title="Personajes" align="right" />
           <Row className="g-4">
-            {["Juanes", "Mensajero", "Ver mas"].map((item) => (
-              <Col md={4} key={item}>
-                <div className="member-card">
-                  <div className="media-placeholder member-photo" />
-                  <h3>{item}</h3>
-                </div>
-              </Col>
-            ))}
+            <Col md={4}>
+              <div className="member-card">
+                <img
+                  src="/Juanes nino.png"
+                  alt="Juanes"
+                  className="member-photo chapter-thumb"
+                />
+                <h3>Juanes</h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="member-card">
+                <img
+                  src="/Entidad.png"
+                  alt="Mensajero"
+                  className="member-photo chapter-thumb"
+                />
+                <h3>Mensajero</h3>
+              </div>
+            </Col>
+            <Col md={4}>
+              <div className="member-card">
+                <div className="media-placeholder member-photo" />
+                <h3>Ver mas</h3>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>
