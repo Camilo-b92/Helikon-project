@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════
+   COMIC.CSS  —  Estilos exclusivos de ComicPage
+═══════════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.comic-hero {
+  padding: 3rem 0 7rem;
+  border-top: none;
+  background: var(--dark-brown);
+}
+
+.comic-page .brand-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.2rem, 11vw, 8rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--white);
+}
+
+.comic-tagline {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: var(--cream);
+}
+
+.comic-summary {
+  max-width: 42rem;
+  margin-top: 3rem;
+  margin-inline: auto;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.35;
+  color: var(--cream);
+}
+
+/* ── Slider de capítulos ── */
+.chapter-slider {
+  display: grid;
+  grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chapter-card {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: #4A2010;
+  text-align: center;
+}
+.chapter-card.side     { transform: scale(0.82); opacity: 0.85; }
+.chapter-card.featured { transform: scale(1.03); }
+
+.chapter-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 0.9;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+}
+
+.chapter-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--ocre-light);
+}
+.chapter-card h4 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+.chapter-card p {
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+
+/* ── Personajes — color override ── */
+.comic-page .member-card h3 { color: var(--gold); }
+
+/* ── Info del Cómic ── */
+.info-block {
+  min-height: 12rem;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #5A2810;
+}
+.info-block.tall { min-height: 23rem; }
+.info-stack      { height: 100%; display: grid; gap: 1rem; }
+
+.info-block h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--gold);
+}
+
+@media (max-width: 991.98px) {
+  .comic-hero     { padding: 2rem 0 4rem; }
+  .chapter-slider { grid-template-columns: 1fr; }
+  .comic-page .slider-arrow { justify-self: center; }
+}
