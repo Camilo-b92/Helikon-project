@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════
+   HOME.CSS  —  Estilos exclusivos de HomePage
+═══════════════════════════════════════════════════════ */
+
+.home-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: var(--black);
+}
+
+.home-stack {
+  width: min(100%, 1180px);
+  display: grid;
+  gap: 2.75rem;
+}
+
+.home-entry {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.home-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 14vw, 9.5rem);
+  line-height: 0.92;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #7A6A58;
+  -webkit-text-stroke: 2px var(--gold);
+  paint-order: stroke fill;
+  transition: transform 180ms ease, color 180ms ease, -webkit-text-stroke 180ms ease;
+}
+
+.home-entry-copy {
+  max-width: 58rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.6rem);
+  transition:
+    max-height 220ms ease,
+    opacity    220ms ease,
+    transform  220ms ease;
+}
+
+.home-entry:hover .home-title,
+.home-entry:focus-visible .home-title {
+  -webkit-text-stroke: 3px var(--ocre-light);
+  transform: scale(1.015);
+}
+
+.home-entry:hover .home-entry-copy,
+.home-entry:focus-visible .home-entry-copy {
+  max-height: 12rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-arrow {
+  display: inline-block;
+  margin: 0.65rem 0 0.3rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.home-entry-copy p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.9rem);
+  line-height: 1.25;
+  font-style: italic;
+  color: #8A7A68;
+}
+
+@media (max-width: 767.98px) {
+  .home-stack { gap: 2rem; }
+}
