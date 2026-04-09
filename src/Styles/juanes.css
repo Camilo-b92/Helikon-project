@@ -1,0 +1,164 @@
+/* ═══════════════════════════════════════════════════════
+   JUANES.CSS  —  Estilos exclusivos de JuanesPage
+═══════════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.juanes-page .page-hero-band {
+  padding: 3rem 0 7rem;
+  background: var(--dark-brown);
+}
+
+.juanes-page .brand-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.2rem, 11vw, 8rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  -webkit-text-stroke: 1px var(--gold-dark);
+}
+
+.juanes-page .hero-mouse { margin-top: 2rem; color: var(--ocre-light); }
+
+/* ── Banda lírica ── */
+.juanes-page .lyric-band {
+  padding: 0.75rem 0;
+  border-top: 3px solid var(--line-blue);
+  background: #F2E8D4;
+}
+.juanes-page .lyric-line {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ── Premios ── */
+.award-row {
+  display: grid;
+  grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto;
+  gap: 1rem;
+  align-items: center;
+}
+.juanes-page .award-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--dark-brown);
+  margin: 1rem 0 0;
+}
+.slider-arrow {
+  color: var(--dark-brown);
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ── Artista / Sus inicios ── */
+.juanes-page .text-section {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.juanes-page .text-section p,
+.juanes-page .section-copy-large {
+  color: var(--dark-brown);
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+.juanes-page .narrow { max-width: 44rem; }
+
+/* ── Foto asimétrica ── */
+.asymmetric-media { position: relative; min-height: 22rem; }
+.rounded-photo { border-radius: 999px; background: #5A3020; }
+.rounded-photo.large  { width: 18rem; height: 18rem; }
+.rounded-photo.medium { position: absolute; right: 1rem; bottom: 0; width: 14rem; height: 14rem; }
+.square-float {
+  position: absolute;
+  top: 0; right: 2rem;
+  width: 8rem; height: 8rem;
+  border-radius: 1rem;
+  background: var(--mid-brown);
+}
+
+/* ── Tienda ── */
+.store-panel {
+  position: relative;
+  min-height: 20rem;
+  display: grid;
+  place-items: center;
+  background: #1A0A00;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.store-arrows { display: flex; gap: 1rem; color: var(--gold); }
+.store-arrow-symbol { font-size: 2.25rem; font-weight: 900; }
+.store-word {
+  position: absolute;
+  right: -0.25rem; top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+}
+
+/* ── Discografía ── */
+.album-copy { display: grid; gap: 1rem; }
+.album-copy h3 {
+  color: var(--dark-brown);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.04em;
+}
+.album-copy p { color: var(--dark-brown); }
+.album-cover,
+.album-floating { aspect-ratio: 1 / 1; border-radius: 1rem; }
+.album-floating       { width: min(100%, 16rem); margin-inline: auto; }
+.album-floating.small { width: min(100%, 13rem); }
+
+/* ── Video ── */
+.video-section {
+  min-height: 20rem;
+  display: grid;
+  place-items: center;
+  background: #1A0A00;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.video-play {
+  width: 5rem; height: 5rem;
+  display: grid; place-items: center;
+  border: 3px solid rgba(200, 134, 42, 0.75);
+  border-radius: 999px;
+}
+.play-triangle {
+  width: 0; height: 0;
+  margin-left: 0.2rem;
+  border-top:    0.9rem solid transparent;
+  border-bottom: 0.9rem solid transparent;
+  border-left:   1.35rem solid rgba(200, 134, 42, 0.75);
+}
+
+/* ── Mini galería ── */
+.gallery-strip { background: var(--mid-brown) !important; }
+.mini-gallery  { display: flex; justify-content: center; gap: 1.1rem; flex-wrap: wrap; }
+.mini-thumb    { width: 4.4rem; height: 4.4rem; border-radius: 0.8rem; }
+
+@media (max-width: 991.98px) {
+  .juanes-page .page-hero-band { padding: 2rem 0 4rem; }
+  .award-row { grid-template-columns: 1fr; }
+  .slider-arrow { justify-self: center; }
+  .store-word { position: static; transform: none; margin-top: 1rem; }
+}
+
+@media (max-width: 767.98px) {
+  .rounded-photo.large  { width: 14rem; height: 14rem; }
+  .rounded-photo.medium { width: 10rem; height: 10rem; }
+  .square-float         { width: 6rem;  height: 6rem; }
+}
